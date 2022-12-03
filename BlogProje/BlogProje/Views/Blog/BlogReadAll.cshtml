@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Entity.Concrete.Blog>
+        @foreach(var i in Model)
+        {
+
+
+<div class="post-content-body">
+    <p>@i.BlogContent</p>
+    <div class="row mb-5 mt-5">
+        <div class="col-md-12 mb-4">
+            <img src="@i.BlogImage" alt="Image placeholder" class="img-fluid rounded">
+        </div>
+       
+    </div>
+</div>
+        }

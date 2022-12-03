@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Entity.Concrete.About>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="site-cover site-cover-sm same-height overlay single-page" style="background-image: url('/miniblog/images/img_4.jpg');">
+    <div class="container">
+        <div class="row same-height justify-content-center">
+            <div class="col-md-12 col-lg-10">
+                <div class="post-entry text-center">
+                    <h1 class="">Hakkımızda</h1>
+                    <p class="lead mb-4 text-white">Blog yazan ekibimizi yakından tanımak ister misiniz ?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="site-section bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 order-md-2">
+                <img src="/miniblog/images/img_1.jpg" alt="Image" class="img-fluid">
+            </div>
+            <div class="col-md-5 mr-auto order-md-1">
+                <h2>Biz Kimiz ? </h2>
+                @foreach (var item in Model)
+                {
+
+
+                    <p>@item.AboutContent1</p>
+                }
+                <ul class="ul-check list-unstyled success">
+                    <li>Her gün 10 yeni blog</li>
+                    <li>Fazla kategoriler</li>
+                    <li>Dünya çapında takipçi</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+@Html.Action("MeetTheTeam", "About")
+
+@Html.Action("AddMail", "MailSubscribe")
+
+@Html.Action("Footer", "About")

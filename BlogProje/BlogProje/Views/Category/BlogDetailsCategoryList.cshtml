@@ -1,0 +1,12 @@
+﻿@model IEnumerable<Entity.Concrete.Category>
+<div class="sidebar-box">
+    <h3 class="heading">Kategoriler</h3>
+    <ul class="categories">
+        @foreach (var i in Model)
+            {
+
+        <li><a href="#">@i.CategoryName<span>(0)</span></a></li>
+
+        }
+    </ul>
+</div>            
