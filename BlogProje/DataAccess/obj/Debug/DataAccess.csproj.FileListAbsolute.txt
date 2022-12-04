@@ -16,3 +16,4 @@ C:\Users\trka8\source\repos\BlogProje\DataAccess\obj\Debug\DataAccess.pdb
 C:\Users\trka8\source\repos\BlogProje\DataAccess\obj\Debug\DataAccess.Migrations.mig1.resources
 C:\Users\trka8\source\repos\BlogProje\DataAccess\obj\Debug\DataAccess.csproj.GenerateResource.cache
 C:\Users\trka8\source\repos\BlogProje\DataAccess\obj\Debug\DataAccess.Migrations.mig2.resources
+C:\Users\trka8\source\repos\BlogProje\DataAccess\obj\Debug\DataAccess.Migrations.mig3.resources

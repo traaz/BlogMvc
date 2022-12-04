@@ -1,9 +1,13 @@
 ﻿using Business.Concrete;
+using DataAccess.Concrete;
+using Entity.Concrete;
 using Microsoft.Ajax.Utilities;
 using PagedList;
 using System;
+
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Web;
 using System.Web.Mvc;
 
@@ -102,6 +106,93 @@ namespace BlogProje.Controllers
             ViewBag.categoryName = categoryName;
             return View(blogs);
         }
-     
+        public ActionResult AdminBlogList()
+        {
+            var blogList = bm.GetAll();
+            return View(blogList);
+        }
+        [HttpGet]
+        public ActionResult AddBlog()
+        {
+            DataAccess.Concrete.Context c = new DataAccess.Concrete.Context();
+            List<SelectListItem> values = (from x in c.Categories.ToList()
+                                           select new SelectListItem
+                                           {
+                                               Text = x.CategoryName,
+                                               Value = x.CategoryId.ToString()
+
+                                           }).ToList();
+            List<SelectListItem> values2 = (from x in c.Authors.ToList()
+                                           select new SelectListItem
+                                           {
+                                               Text = x.AuthorName,
+                                               Value = x.AuthorId.ToString()
+
+                                           }).ToList();
+            
+            ViewBag.values = values;
+            ViewBag.values2 = values2;
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AddBlog(Blog b)
+        {
+            bm.AddBlog(b);
+            return RedirectToAction("AdminBlogList");
+        }
+        public ActionResult deleteBlog(int id)
+        {
+            bm.DeleteBlog(id);
+            return RedirectToAction("AdminBlogList");
+        }
+        [HttpGet]
+        public ActionResult updateBlog(int id)
+        {
+            Blog blog = bm.findBlog(id);
+            DataAccess.Concrete.Context c = new DataAccess.Concrete.Context();
+            List<SelectListItem> values = (from x in c.Categories.ToList()
+                                           select new SelectListItem
+                                           {
+                                               Text = x.CategoryName,
+                                               Value = x.CategoryId.ToString()
+
+                                           }).ToList();
+            List<SelectListItem> values2 = (from x in c.Authors.ToList()
+                                            select new SelectListItem
+                                            {
+                                                Text = x.AuthorName,
+                                                Value = x.AuthorId.ToString()
+
+                                            }).ToList();
+
+            ViewBag.values = values;
+            ViewBag.values2 = values2;
+            return View(blog);
+        }
+        [HttpPost]
+        public ActionResult updateBlog(Blog b)
+        {
+            bm.updateBlog(b);
+            DataAccess.Concrete.Context c = new DataAccess.Concrete.Context();
+            List<SelectListItem> values = (from x in c.Categories.ToList()
+                                           select new SelectListItem
+                                           {
+                                               Text = x.CategoryName,
+                                               Value = x.CategoryId.ToString()
+
+                                           }).ToList();
+            List<SelectListItem> values2 = (from x in c.Authors.ToList()
+                                            select new SelectListItem
+                                            {
+                                                Text = x.AuthorName,
+                                                Value = x.AuthorId.ToString()
+
+                                            }).ToList();
+
+            ViewBag.values = values;
+            ViewBag.values2 = values2;
+           
+            return RedirectToAction("AdminBlogList");
+        }
     }
 }
