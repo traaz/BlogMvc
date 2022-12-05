@@ -194,5 +194,12 @@ namespace BlogProje.Controllers
            
             return RedirectToAction("AdminBlogList");
         }
+        public ActionResult GetCommentByBlog(int id)
+        {
+            CommentManager cm = new CommentManager();
+            var comments = cm.CommentByBlog(id);
+            return View(comments);
+        }
+
     }
 }
