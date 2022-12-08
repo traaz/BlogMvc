@@ -18,6 +18,7 @@ namespace Entity.Concrete
         [StringLength(200)]
         public string CommentText  { get; set; }
         public DateTime CommentDate { get; set; }
+        public bool CommentStatus { get; set; }
         public int BlogId { get; set; }
         public virtual Blog Blogs { get; set; }
 

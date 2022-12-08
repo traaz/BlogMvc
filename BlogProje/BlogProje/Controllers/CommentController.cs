@@ -30,5 +30,15 @@ namespace BlogProje.Controllers
             cm.CommnetAdd(c);
             return PartialView();
         }
+        public ActionResult AdminCommentList()
+        {
+            var commentList = cm.CommentStatusTrue();
+            return View(commentList);
+        }
+        public ActionResult changeStatusFalse(int id)
+        {
+            cm.changeCommnetStatusFalse(id);
+            return RedirectToAction("AdminCommentList");
+        }
     }
 }

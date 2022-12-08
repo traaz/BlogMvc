@@ -12,13 +12,14 @@ namespace Business.Concrete
     public class CommentManager
     {
         Repository<Comment> repo = new Repository<Comment>();   
-        public List<Comment> CommentList(int id)
+        public List<Comment> CommentList()
         {
             return repo.List();
         }
+     
         public List<Comment> CommentByBlog(int id)
         {
-            return repo.List(x=>x.BlogId == id);
+            return repo.List(x=>x.BlogId == id && x.CommentStatus == true);
         }
         public int CommnetAdd(Comment c)
         {
@@ -31,6 +32,16 @@ namespace Business.Concrete
 
                 return repo.Insert(c);
             }
+        }
+        public List<Comment> CommentStatusTrue( )
+        {
+            return repo.List(x => x.CommentStatus == true);
+        }
+        public int changeCommnetStatusFalse(int id)
+        {
+            Comment comment = repo.Find(x => x.CommentId == id);
+            comment.CommentStatus = false;
+            return repo.Update(comment);
         }
     }
 }
