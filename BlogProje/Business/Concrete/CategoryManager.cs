@@ -15,5 +15,21 @@ namespace Business.Concrete
         {
            return repo.List();
         }
+        public int AddCategory(Category category)
+        {
+            if (category.CategoryName == "")
+            {
+                return -1;
+            }
+            else
+            {
+                return repo.Insert(category);
+            }
+        }
+        public int deleteCategory(int id)
+        {
+            Category category = repo.GetById(id);
+            return repo.Delete(category);
+        }
     }
 }

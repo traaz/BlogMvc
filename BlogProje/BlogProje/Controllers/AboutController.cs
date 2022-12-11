@@ -1,4 +1,5 @@
 ﻿using Business.Concrete;
+using Entity.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +28,18 @@ namespace BlogProje.Controllers
             AuthorManageer authorManageer= new AuthorManageer();
             var authors = authorManageer.GetAll();
             return PartialView(authors);
+        }
+        [HttpGet]
+        public ActionResult updateAboutList()
+        {
+            var abouts = manager.GetAll();
+            return View(abouts);
+        }
+        [HttpPost]
+        public ActionResult updateAbout(About a)
+        {
+            manager.updateAbout(a);
+            return RedirectToAction("updateAboutList");
         }
     }
 }

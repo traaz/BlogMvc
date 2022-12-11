@@ -1,4 +1,5 @@
 ﻿using Business.Concrete;
+using Entity.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +23,27 @@ namespace BlogProje.Controllers
 
             return PartialView(categoryValues);
         }
-    
+        public ActionResult AdminCategoryList()
+        {
+            var categoryValues = manager.GetAll();
+            return View(categoryValues);
+        }
+        [HttpGet]
+        public ActionResult AddCategory()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AddCategory(Category category)
+        {
+            manager.AddCategory(category);
+            return RedirectToAction("AdminCategoryList");
+        }
+        public ActionResult deleteCategory(int id)
+        {
+            manager.deleteCategory(id);
+            return RedirectToAction("AdminCategoryList");
+        }
 
     }
 }
