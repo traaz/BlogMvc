@@ -15,5 +15,14 @@ namespace Business.Concrete
         {
             return repo.Insert(c);
         }
+        public List<Contact> GetAll()
+        {
+            return repo.List();
+        }
+        public Contact GetContactDetails(int id)
+        {
+            return repo.Find(x=>x.ContactId== id);  
+
+        }
     }
 }

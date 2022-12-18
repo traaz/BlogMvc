@@ -19,3 +19,5 @@ C:\Users\trka8\source\repos\BlogProje\DataAccess\obj\Debug\DataAccess.Migrations
 C:\Users\trka8\source\repos\BlogProje\DataAccess\obj\Debug\DataAccess.Migrations.mig3.resources
 C:\Users\trka8\source\repos\BlogProje\DataAccess\obj\Debug\DataAccess.Migrations.mg4.resources
 C:\Users\trka8\source\repos\BlogProje\DataAccess\obj\Debug\DataAccess.Migrations.mg5.resources
+C:\Users\trka8\source\repos\BlogProje\DataAccess\obj\Debug\DataAccess.Migrations.mg6.resources
+C:\Users\trka8\source\repos\BlogProje\DataAccess\obj\Debug\DataAccess.Migrations.mg61.resources

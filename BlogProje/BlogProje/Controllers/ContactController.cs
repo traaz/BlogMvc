@@ -2,6 +2,7 @@
 using Entity.Concrete;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -27,6 +28,18 @@ namespace BlogProje.Controllers
         {
             manager.ContactAdd(c);
             return View();
+        }
+        public ActionResult SendBox()
+        {
+            var messageList = manager.GetAll();
+          
+            return View(messageList);
+        }
+        public ActionResult MessageDetails(int id) {
+            Contact contact = manager.GetContactDetails(id);
+            return View(contact);
+                
+        
         }
     }
 }
