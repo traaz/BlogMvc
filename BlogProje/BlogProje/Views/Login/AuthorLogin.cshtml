@@ -32,18 +32,18 @@ Author URL: http://w3layouts.com
 
     <!-- form section start -->
     <section class="w3l-hotair-form">
-        <h1>Report Login Form</h1>
+        <h1>Yazar Girişi</h1>
         <div class="container">
             <!-- /form -->
             <div class="workinghny-form-grid">
                 <div class="main-hotair">
                     <div class="content-wthree">
-                        <h2>Log In</h2>
+                        <h2>Giriş</h2>
                         @using(Html.BeginForm("AuthorLogin", "Login", FormMethod.Post))
                         {
-                            <input type="text" class="text" name="AuthorMail" placeholder="User Name" required="" autofocus>
-                            <input type="password" class="password" name="AuthorPassword" placeholder="User Password" required="" autofocus>
-                            <button class="btn" type="submit">Log In</button>
+                            <input type="text" class="text" name="AuthorMail" placeholder="Mail" required="" autofocus>
+                            <input type="password" class="password" name="AuthorPassword" placeholder="Şifre" required="" autofocus>
+                            <button class="btn" type="submit">Giriş Yap</button>
 
                         }
                         <p class="account">Don't have an account? <a href="#signup">Register</a></p>

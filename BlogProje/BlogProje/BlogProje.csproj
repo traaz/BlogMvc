@@ -2487,6 +2487,9 @@
     <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\Login\AuthorLogin.cshtml" />
     <Content Include="Views\User\Partial1.cshtml" />
+    <Content Include="Views\User\BlogList.cshtml" />
+    <Content Include="Views\User\updateBlog.cshtml" />
+    <Content Include="Views\User\AddBlog.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
