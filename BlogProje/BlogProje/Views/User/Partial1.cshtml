@@ -1,11 +1,25 @@
 ﻿@model IEnumerable<Entity.Concrete.Author>
 
+@using(Html.BeginForm("UpdateUserProfile", "User", FormMethod.Post))
+            {
 
-@foreach(var item in Model)
+           
+foreach(var item in Model)
 {
 
 
 <form class="form-horizontal">
+    <div class="form-group row">
+
+        <label for="inputName" class="col-sm-2 col-form-label">Yazar Id</label>
+
+        <div class="col-sm-10">
+
+            <input type="text" class="form-control" name="AuthorId" value="@item.AuthorId">
+
+        </div>
+
+    </div>
 
     <div class="form-group row">
 
@@ -13,7 +27,7 @@
 
         <div class="col-sm-10">
 
-            <input type="email" class="form-control" id="inputName" value="@item.AuthorName">
+            <input type="text" class="form-control" name="AuthorName" value="@item.AuthorName">
 
         </div>
 
@@ -25,7 +39,7 @@
 
         <div class="col-sm-10">
 
-            <input type="email" class="form-control" id="inputEmail" value="@item.AuthorMail">
+            <input type="text" class="form-control" name="AuthorMail" value="@item.AuthorMail">
 
         </div>
 
@@ -37,7 +51,7 @@
 
         <div class="col-sm-10">
 
-            <input type="text" class="form-control" id="inputName2" value="@item.AuthorTitle">
+            <input type="text" class="form-control" name="AuthorTitle" value="@item.AuthorTitle">
 
         </div>
 
@@ -49,7 +63,7 @@
 
         <div class="col-sm-10">
 
-            <input type="text" class="form-control" id="inputName2" value="@item.PhoneNumber">
+            <input type="text" class="form-control" name="PhoneNumber" value="@item.PhoneNumber">
 
         </div>
 
@@ -61,7 +75,7 @@
 
         <div class="col-sm-10">
 
-            <input type="text" class="form-control" id="inputSkills" value="@item.AuthorImage">
+            <input type="text" class="form-control" name="AuthorImage" value="@item.AuthorImage">
 
         </div>
 
@@ -72,7 +86,7 @@
 
         <div class="col-sm-10">
 
-            <input type="text" class="form-control" id="inputSkills" value="@item.AuthorPassword">
+            <input type="text" class="form-control" name="AuthorPassword" value="@item.AuthorPassword">
 
         </div>
 
@@ -81,15 +95,15 @@
 
         <div class="offset-sm-2 col-sm-10">
 
-           
 
-                <label>
 
-                    <input type="text">Şifre Güncellemek İstiyorum
+            <label>
 
-                </label>
+                <input type="text">Şifre Güncellemek İstiyorum
 
-            
+            </label>
+
+
 
         </div>
 
@@ -119,4 +133,5 @@
     </div>
 
 </form>
+}
 }

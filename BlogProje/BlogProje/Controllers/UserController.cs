@@ -32,7 +32,7 @@ namespace BlogProje.Controllers
             mail = (string)Session["AuthorMail"];
 
             Context c = new Context();
-            int id =c.Authors.Where(x=>x.AuthorMail == mail).Select(y=>y.AuthorId).FirstOrDefault();
+            int id = c.Authors.Where(x => x.AuthorMail == mail).Select(y => y.AuthorId).FirstOrDefault();
             var blogs = userProfile.GetBlogByAuthor(id);
             return View(blogs);
         }
@@ -121,5 +121,15 @@ namespace BlogProje.Controllers
             bm.DeleteBlog(id);
             return RedirectToAction("BlogList");
         }
-    }
+
+        public ActionResult UpdateUserProfile(Author author)
+        {
+            userProfile.updateAuthor(author);
+            return RedirectToAction("Index");
+        }
+
+
+
+    } 
+    
 }

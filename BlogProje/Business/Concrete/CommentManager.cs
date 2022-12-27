@@ -43,5 +43,6 @@ namespace Business.Concrete
             comment.CommentStatus = false;
             return repo.Update(comment);
         }
+        
     }
 }
