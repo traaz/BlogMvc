@@ -20,3 +20,6 @@ Yazar Paneli
 ![Yazar Panel](https://user-images.githubusercontent.com/84031734/211217065-db6bb0af-8bd6-4ecf-a2e3-6aae5511d294.png)
 
 ![Yazar Panel 2](https://user-images.githubusercontent.com/84031734/211217068-1c09804c-a576-4c72-9156-176910f07d3c.png)
+
+
+Yazar panelinde yazara edilen yorumlar kaldı sadece. O Konuya da bakılacak..
