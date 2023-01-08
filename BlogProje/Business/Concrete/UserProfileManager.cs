@@ -12,6 +12,8 @@ namespace Business.Concrete
     {
         Repository<Author> repoAuthor = new Repository<Author>();
         Repository<Blog> repoUser = new Repository<Blog>();
+        Repository<Comment> repoComment = new Repository<Comment>();
+
         public List<Author> GetAuthorByMail(string mail)
         {
             return repoAuthor.List(x=>x.AuthorMail == mail);
@@ -38,5 +40,16 @@ namespace Business.Concrete
             return repoAuthor.Update(author);
         }
 
+   /*    public List<Comment> GetCommentByAuthor(int id)
+        {
+            Context context = new Context();
+            var query = ("Select CommentText From Comments where BlogId IN (Select BlogId From Blogs where AuthorId=@id)").ToList();
+            context.Database.ExecuteSqlCommand(query, @id);
+            return query;
+
+
+          //  return repoComment.List(x => x.AuthorId == id);
+        }
+   */
     }
 }

@@ -100,3 +100,4 @@ C:\Users\trka8\source\repos\BlogProje\BlogProje\bin\PagedList.dll
 C:\Users\trka8\source\repos\BlogProje\BlogProje\bin\PagedList.Mvc.dll
 C:\Users\trka8\source\repos\BlogProje\BlogProje\bin\PagedList.xml
 C:\Users\trka8\source\repos\BlogProje\BlogProje\bin\PagedList.Mvc.xml
+C:\Users\trka8\source\repos\BlogProje\BlogProje\bin\Business.dll.config

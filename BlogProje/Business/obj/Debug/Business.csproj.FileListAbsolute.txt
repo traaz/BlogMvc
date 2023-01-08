@@ -13,3 +13,6 @@ C:\Users\trka8\source\repos\BlogProje\Business\obj\Debug\Business.csproj.CoreCom
 C:\Users\trka8\source\repos\BlogProje\Business\obj\Debug\Business.csproj.CopyComplete
 C:\Users\trka8\source\repos\BlogProje\Business\obj\Debug\Business.dll
 C:\Users\trka8\source\repos\BlogProje\Business\obj\Debug\Business.pdb
+C:\Users\trka8\source\repos\BlogProje\Business\bin\Debug\Business.dll.config
+C:\Users\trka8\source\repos\BlogProje\Business\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\trka8\source\repos\BlogProje\Business\bin\Debug\EntityFramework.SqlServer.xml
